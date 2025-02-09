@@ -12,4 +12,4 @@
 ## 🛠️ Installation  
 1. Download or clone this repository:  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/form-genie.git
+   git clone https://github.com/orionop/form-genie.git
