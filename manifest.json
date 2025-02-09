@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Form Genie",
+  "version": "1.0",
+  "description": "AI-powered Google Form auto-responder that fills forms intelligently using GPT.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://docs.google.com/forms/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": { 
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/form.png",
+      "48": "icons/form.png",
+      "128": "icons/form.png"
+    }
+  },
+  "icons": {
+    "16": "icons/form.png",
+    "48": "icons/form.png",
+    "128": "icons/form.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/forms/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
